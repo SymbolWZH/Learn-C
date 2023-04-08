@@ -1,1 +1,1 @@
-# Nuxt-Vue-Project
+# LearnC
