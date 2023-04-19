@@ -1,17 +1,17 @@
 {
     "version": "2.0.0",
-    "command": "gc",  //这里的名字 注意一下
+    "command": "g++",
     "args": [
         "-g",
-        "${file}",
+        "${fileDirname}",//原file
         "-o",
-        "${fileBasenameNoExtension}.exe"
+        "${workspaceFolder}/exe/${fileBasenameNoExtension}.exe"
     ], // 编译命令参数
     "problemMatcher": {
         "owner": "cpp",
         "fileLocation": [
             "relative",
-            "${workspaceFolder}"
+            "\\"
         ],
         "pattern": {
             "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
@@ -23,18 +23,3 @@
         }
     }
 }
-// {
-//     "configurations": [
-//       {
-//         "name": "Win64",
-//         "includePath": ["${workspaceFolder}/**"],
-//         "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-//         "windowsSdkVersion": "10.0.18362.0",
-//         "compilerPath": "C:/MinGW/bin/g++.exe",
-//         "cStandard": "c17",
-//         "cppStandard": "c++17",
-//         "intelliSenseMode": "gcc-x64"
-//       }
-//     ],
-//     "version": 4
-//   }

@@ -99,14 +99,14 @@ int g_val = 2000;
 // }
 
 
-int main()
-{
-    int ch = getchar();//getchar获取键盘输入的第一个字符；
-    //gets 读一行
-    // EOF - end of file -文件结束标识
-    putchar(ch);//输出一个字符
+// int main()
+// {
+//     int ch = getchar();//getchar获取键盘输入的第一个字符；
+//     //gets 读一行
+//     // EOF - end of file -文件结束标识
+//     putchar(ch);//输出一个字符
 
-    //两个字符串进行比较 不能用 == 
-    // 比较使用if(strcmp(username,"123456") == 0)
-    return 0;
-}
+//     //两个字符串进行比较 不能用 == 
+//     // 比较使用if(strcmp(username,"123456") == 0)
+//     return 0;
+// }

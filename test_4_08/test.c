@@ -18,8 +18,9 @@
 //     printf("%d\n",sizeof(double));//双精度浮点数	8
 //     return 0;
 // }
-extern int g_val;
-int main(){
+// extern int g_val;
+int main()
+{
     printf("%d\n",g_val);
     return 0;
 }
