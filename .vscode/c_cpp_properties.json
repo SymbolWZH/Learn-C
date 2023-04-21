@@ -4,17 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceRoot}",
-                // 以下7行需要修改
-                "C:/mingw64/include/**",
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../include",
-
-                // 将查询结果直接粘进来
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
-                "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+                "C:\\mingw64"
             ],
             "defines": [
                 "_DEBUG",
@@ -22,23 +12,14 @@
                 "__GNUC__=6",
                 "__cdecl=__attribute__((__cdecl__))"
             ],
-            "intelliSenseMode": "msvc-x64",
+            "intelliSenseMode": "windows-gcc-x64",
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": "",
                 "path": [
                     "${workspaceRoot}",
-                    // 以下7行需要修改
-                    "C:/mingw64/include/**",
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../include",
-                    
-                    // 将查询结果直接粘进来
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
-                    "C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
+                    "C:\\mingw64"
+                    //此处修改为自己mingw64的路径
                 ]
             }
         }
