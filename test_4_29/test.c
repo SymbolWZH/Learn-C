@@ -347,6 +347,7 @@ int main()
     print(i);
 }
 */
+/*
 //喝汽水 1瓶1元 2个空瓶可以换1瓶 给20 可以多少喝多少瓶
 void total(int price,int num,int money)
 {
@@ -367,4 +368,48 @@ int main()
     scanf("%d %d %d",&price,&num,&money);    
     total(price,num,money);
     return  0;
+}
+*/
+
+//将一组数组中的数据按照奇数在前偶数在后方式排列
+void print(int arr[],int len)
+{
+    for (size_t i = 0; i < len; i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    
+}
+void move(int arr[],int len)
+{
+    int left = 0;
+    int right = len-1;
+
+   while (left < right)
+   {
+        while (arr[left] % 2 != 0)
+        {
+            /* code */
+            left++;
+        }
+        while (arr[right] % 2 == 0)
+        {
+            /* code */
+            right--;
+        }
+        if(left < right)
+        {
+            int tmp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = tmp;
+        }
+   }
+}
+int main()
+{
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int len = sizeof(arr) / sizeof(arr[0]);
+    move(arr,len);
+    print(arr,len);
+    return 0;
 }
