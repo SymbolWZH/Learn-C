@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 #include<windows.h>
-
+#include<stddef.h>
 struct Book
 {
     char name;
@@ -95,15 +95,60 @@ struct Book4
     char c1;
     
 };
+#pragma pack(2)//表示下面的默认对齐树为2 一般设置2的n次方   如果设置1 取里面的整型不好取
+struct Book5
+{
+    char c2;
+    int i;
+    char c1;
+    
+};
+// int main()
+// {
+//     //ps = &s; //err
+//     struct Book b3 = {'c',100,99};//创建方式二  局部   sizeof(b3) 是16 是因为16 刚好是最大字节数8 的倍数
+//     struct Book3 b5;
+//     struct Book4 b6;
+//     struct Book5 b7;
+//     printf("%d\n", sizeof(b5));
+//     printf("%d\n", offsetof(struct Book5,i));// #include<stddef.h> offsetof 计算结构体中某变量相对于首地址的偏移
+//     printf("%d\n", sizeof(b6));
+//     printf("%d\n", sizeof(b7));
+//     printf("%c %d %c %d", b3.name,b3.price,b3.id,sizeof(b3));
+//     return 0;
+// }
+
+// 什么是位段
+// 位段的声明和结构是类似的，有两个不同：
+// 1.位段的成员必须是 int、unsigned int 或signed int 。
+// 2.位段的成员名后边有一个冒号和一个数字。
+// 1. 位段的成员可以是 int unsigned int signed int 或者是 char （属于整形家族）类型
+// 2. 位段的空间上是按照需要以4个字节（ int ）或者1个字节（ char ）的方式来开辟的。
+// 3. 位段涉及很多不确定因素，位段是不跨平台的，注重可移植的程序应该避免使用位段。
+//举例
+// 00 男
+// 01 女
+// 10 保密
+// 11
+struct A
+{
+ int _a:2;//成员占2个bit位
+ int _b:5;
+ int _c:10;
+ int _d:30;
+};
+enum day//枚举 声明枚举类型
+{
+    Mon,//枚举类型的可能取值的常量
+    Tues,
+    Wed,
+    the=5
+};
 int main()
 {
-    //ps = &s; //err
-    struct Book b3 = {'c',100,99};//创建方式二  局部   sizeof(b3) 是16 是因为16 刚好是最大字节数8 的倍数
-    struct Book3 b5;
-    struct Book4 b6;
-    printf("%d\n", sizeof(b5));
-    printf("%d\n", sizeof(b6));
-    printf("%c %d %c %d", b3.name,b3.price,b3.id,sizeof(b3));
-    return 0;
+    enum day dy = Mon;
+    printf("%d\n",Mon);
+    printf("%d\n",Tues);
+    printf("%d\n",Wed);
+    printf("%d\n",the);
 }
-
