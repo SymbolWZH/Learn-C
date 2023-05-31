@@ -1,0 +1,5 @@
+﻿  contact.c
+  function.c
+C:\Users\Administrator\Desktop\ccc\Contact\Contact\function.c(45,10): warning C4477: “printf”: 格式字符串“%-2d”需要类型“int”的参数，但可变参数 3 拥有了类型“const char *”
+  正在生成代码...
+  Contact.vcxproj -> C:\Users\Administrator\Desktop\ccc\Contact\Debug\Contact.exe
